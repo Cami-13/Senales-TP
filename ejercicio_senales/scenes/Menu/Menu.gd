@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var red_generator: TextureButton = $RedGenerator
 @onready var violet_generator: TextureButton = $VioletGenerator
+@onready var reset: TextureButton = $Reset
 
 
 const INSTANCES_TEXT = "Cantidad de instancias: "
@@ -30,3 +31,7 @@ func _on_violet_generator_button_down() -> void:
 func count_new_instance():
 	instancesCount += 1
 	$CountLabel.text = str(instancesCount)
+	
+func delete():
+	instancesCount = 0
+	$CountLabel.text = "Cantidad de Instancias:"
