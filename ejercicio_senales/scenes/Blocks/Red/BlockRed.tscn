@@ -7,8 +7,10 @@
 radius = 32.903
 
 [node name="BlockRed" type="RigidBody2D" groups=["blocks"]]
+position = Vector2(67, 52)
 gravity_scale = 2.0
 script = ExtResource("1_gtm02")
+metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

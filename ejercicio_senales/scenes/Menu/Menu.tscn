@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(1519.98, 67.3924)
 
-[node name="Menu" type="Node2D"]
+[node name="Menu" type="Node2D" groups=["blocks"]]
 script = ExtResource("5")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -48,10 +48,10 @@ position = Vector2(513.885, 577.225)
 shape = SubResource("1")
 
 [node name="CountLabel" type="Label" parent="."]
-offset_left = 488.0
-offset_top = 95.0
-offset_right = 668.0
-offset_bottom = 144.0
+offset_left = 492.0
+offset_top = 159.0
+offset_right = 672.0
+offset_bottom = 208.0
 text = "Cantidad de Instancias:
 "
 
