@@ -25,6 +25,7 @@ offset_top = 132.0
 offset_right = 282.0
 offset_bottom = 260.0
 script = ExtResource("4_d2jjm")
+metadata/_edit_use_anchors_ = true
 
 [node name="VioletGenerator" parent="." instance=ExtResource("2")]
 offset_left = 867.0
@@ -32,6 +33,7 @@ offset_top = 116.0
 offset_right = 995.0
 offset_bottom = 244.0
 script = ExtResource("6_uqwds")
+metadata/_edit_use_anchors_ = true
 
 [node name="Reset" parent="." instance=ExtResource("4")]
 offset_left = 503.0

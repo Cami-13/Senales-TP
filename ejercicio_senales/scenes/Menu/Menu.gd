@@ -1,5 +1,9 @@
 extends Node2D
 
+@onready var red_generator: TextureButton = $RedGenerator
+@onready var violet_generator: TextureButton = $VioletGenerator
+
+
 const INSTANCES_TEXT = "Cantidad de instancias: "
 # Variable para contar cantidad de instancias
 var instancesCount = 0
@@ -10,10 +14,19 @@ func _ready():
 	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
 	pass
 
+	var red_generator = get_node("RedGenerator")
+	var violet_generator = get_node("VioletGenerator")
+	
+	red_generator.connect("button_down", Callable(self, "count_new_instance"))
+	violet_generator.connect("button_down", Callable(self, "count_new_instance"))
 
 func _on_red_generator_button_down() -> void:
-	pass # Replace with function body.
+	red_generator.generate_block()
 
 
 func _on_violet_generator_button_down() -> void:
-	pass # Replace with function body.
+	violet_generator.generate_block()
+
+func count_new_instance():
+	instancesCount += 1
+	$CountLabel.text = str(instancesCount)
